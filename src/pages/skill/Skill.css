@@ -1,0 +1,129 @@
+
+/* Skills Section */
+.skills-section {
+  position: relative;
+  color: #E8C999;
+  padding: 2rem 0;
+}
+
+.skill-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 8rem;
+  margin-top: 6rem;
+  position: relative;
+  color: #FFD700;
+}
+
+.skill-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 3px;
+  background: #ECFAE5;
+}
+
+/* Style untuk kategori skill */
+.skill-category {
+  margin-bottom: 3rem;
+}
+
+.category-title {
+  font-size: 1.6rem;
+  color: #ECFAE5;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  padding-left: 20px;
+}
+
+.category-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 25px;
+  background: #FFD700; /* Gold color */
+  border-radius: 4px;
+}
+
+/* Container untuk skill icons */
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+/* Style untuk masing-masing icon skill */
+.skill-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.skill-icon-container:hover {
+  transform: translateY(-8px);
+}
+
+.skill-icon {
+  font-size: 3.5rem;
+  color: #ECFAE5;
+  background: rgba(255, 255, 255, 0.08); /* Slight white background */
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.skill-icon-container:hover .skill-icon {
+  background: rgba(255, 215, 0, 0.15); /* Gold background on hover */
+  color: #FFD700;
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.15);
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  color: #F3F3E0;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-icons {
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .skill-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2.8rem;
+  }
+  
+  .category-title {
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  .category-title::before {
+    left: 50%;
+    top: -15px;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 6px;
+  }
+}

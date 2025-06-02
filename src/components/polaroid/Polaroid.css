@@ -1,0 +1,42 @@
+/* Polaroid.css */
+.polaroid-wrapper {
+  perspective: 1000px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.polaroid {
+  background-color: white;
+  padding: 15px 15px 45px 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: rotate(-3deg);
+  transition: transform 0.5s ease;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.polaroid-inner {
+  width: 100%;
+}
+
+.polaroid-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+.polaroid-caption {
+  margin-top: 15px;
+  font-family: 'Indie Flower', cursive, sans-serif;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}

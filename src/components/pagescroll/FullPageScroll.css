@@ -1,0 +1,131 @@
+/* Full Page Scroll Styles */
+.fullpage-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Setiap section mengisi penuh layar */
+.fullpage-section {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animasi untuk konten yang masuk */
+.section-content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* Ketika section aktif/terlihat */
+.fullpage-section.active .section-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variasi animasi untuk setiap section */
+.fullpage-section.slide-from-left .section-content {
+  transform: translateX(-100px);
+}
+
+.fullpage-section.slide-from-right .section-content {
+  transform: translateX(100px);
+}
+
+.fullpage-section.scale-up .section-content {
+  transform: scale(0.8);
+}
+
+.fullpage-section.fade-in .section-content {
+  transform: none;
+}
+
+/* Active state untuk semua variasi */
+.fullpage-section.active.slide-from-left .section-content,
+.fullpage-section.active.slide-from-right .section-content {
+  transform: translateX(0);
+}
+
+.fullpage-section.active.scale-up .section-content {
+  transform: scale(1);
+}
+
+/* Background untuk setiap section */
+.section-welcome {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.section-about {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.section-skills {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.section-projects {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: white;
+}
+
+.section-experience {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  color: white;
+}
+
+/* Scroll indicator (opsional) */
+.scroll-indicator {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.scroll-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-dot.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .fullpage-section {
+    padding: 20px;
+  }
+  
+  .section-content {
+    padding: 0 15px;
+  }
+}
+
+/* Disable scroll snap on mobile untuk better UX */
+@media (max-width: 480px) {
+  .fullpage-container {
+    scroll-snap-type: none;
+  }
+}

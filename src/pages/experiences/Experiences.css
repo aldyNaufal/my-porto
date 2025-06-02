@@ -1,0 +1,434 @@
+/* Experience Section */
+
+.experience-content {
+  position: relative;
+  color: #E8C999;
+  padding: 2rem 0;
+}
+
+.experience-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  margin-top: 100px;
+  position: relative;
+  color: #FFD700;
+}
+
+.experience-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #ECFAE5;
+}
+
+/* Horizontal Card Layout */
+.experience-card-horizontal {
+    border: 1px solid rgba(255,255,255,0.1); /* Border semi-transparent */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Shadow lebih gelap */
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.1); /* Background semi-transparent */
+    backdrop-filter: blur(10px); /* Glass effect */
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.experience-card-horizontal:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    background: rgba(255,255,255,0.15); /* Sedikit lebih terang saat hover */
+    transform: translateY(-2px);
+}
+
+.experience-card-horizontal .card-body {
+    padding: 1.5rem;
+}
+
+.modal-position-title {
+    color: #FFD700 !important; /* Emas untuk position */
+    font-weight: 600;
+}
+
+.modal-company-name {
+    color: #ECFAE5 !important; /* Hijau muda untuk company */
+    font-weight: 500;
+}
+
+
+.modal-header-custom {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)!important;
+    color: white;
+    border-bottom: 1px solid #4a5568;
+}
+
+.modal-header-custom .btn-close {
+    filter: invert(1);
+}
+
+/* Content Section */
+.content-section .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FFD700 ; /* Putih untuk kontras */
+    margin-bottom: 0.25rem;
+}
+
+.company-name {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.8); /* Putih semi-transparent */
+    font-weight: 500;
+}
+
+.date-location {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7)!important;
+    margin-bottom: 0.25rem;
+}
+
+.location {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7)!important;
+}
+
+/* Skills Section */
+.skills-section {
+    margin-top: 1rem;
+}
+
+.skills-label {
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.skills-container {
+    display: inline;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.5;
+}
+
+/* View Details Button */
+.view-details-btn {
+    border-color: #4da6ff;
+    color: #4da6ff;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background: rgba(77,166,255,0.1);
+}
+
+.view-details-btn:hover {
+    background-color: #4da6ff;
+    border-color: #4da6ff;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Modal Styling */
+.modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-bottom: none;
+    padding: 1.5rem;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+.modal-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.modal-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.modal-body {
+    padding: 2rem;
+    background: white; /* Modal tetap putih untuk readability */
+}
+
+.modal-body h6 {
+    color: #333;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    border-bottom: 2px solid #f1f3f4;
+    padding-bottom: 0.25rem;
+}
+
+.modal-body h6:first-of-type {
+    margin-top: 0;
+}
+
+.modal-body .badge {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.35rem 0.65rem;
+}
+
+.modal-body ul {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+}
+
+.modal-body li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.modal-body p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 0;
+}
+
+.modal-body .row {
+    margin-bottom: 0.5rem;
+}
+
+.modal-body .col-md-6 {
+    margin-bottom: 0.5rem;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card1 {
+        padding: 2rem 1rem;
+    }
+    
+    .card1 h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    
+    .experience-card-horizontal .card-body {
+        padding: 1rem;
+    }
+    
+    .experience-card-horizontal .d-flex {
+        flex-direction: column;
+    }
+    
+    .logo-section {
+        margin-bottom: 1rem;
+    }
+    
+    .company-logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .view-details-btn {
+        align-self: flex-start;
+        margin-top: 1rem;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    .modal-logo {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .skills-container {
+        display: block;
+        margin-top: 0.5rem;
+    }
+    
+    .modal-header {
+        padding: 1rem;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+}
+
+
+/* Styling untuk navigation tabs */
+.experience-nav {
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 1rem;
+}
+
+.experience-nav-link {
+    color: #6c757d !important;
+    border: 1px solid #dee2e6;
+    margin: 0 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.experience-nav-link:hover {
+    background-color: #f8f9fa;
+    border-color: #adb5bd;
+}
+
+.experience-nav-link.active {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+    color: white !important;
+}
+
+/* Logo section dengan category badge */
+.logo-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    object-fit: contain; /* Agar logo tidak terpotong */
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.category-badge {
+    font-size: 0.65rem;
+    margin-top: 0.25rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Card styling berdasarkan kategori */
+.work-experience-card {
+    border-left: 4px solid #0d6efd;
+}
+
+.organization-experience-card {
+    border-left: 4px solid #198754;
+}
+
+.work-experience-card:hover {
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.1);
+    border-left-color: #0b5ed7;
+}
+
+.organization-experience-card:hover {
+    box-shadow: 0 4px 8px rgba(25, 135, 84, 0.1);
+    border-left-color: #157347;
+}
+
+/* Position badge styling */
+.position-badge {
+    font-size: 0.7rem;
+    vertical-align: top;
+}
+
+/* Modal logo styling */
+.modal-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+/* No experience message */
+.no-experience-message {
+    padding: 3rem 1rem;
+    color: #6c757d;
+}
+
+/* Skills section enhancement */
+.skills-container {
+    display: inline;
+}
+
+.skills-label {
+    color: #FFFFFF;
+    font-size: 0.9rem;
+}
+
+/* View details button enhancement */
+.view-details-btn {
+    min-width: 100px;
+    font-size: 0.85rem;
+}
+
+.company-links-section {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.company-links-section .btn {
+    transition: all 0.3s ease;
+    font-size: 14px;
+    padding: 8px 16px;
+}
+
+.company-links-section .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Warna khusus untuk Instagram button */
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* Responsive design untuk mobile */
+@media (max-width: 576px) {
+    .company-links-section .d-flex {
+        flex-direction: column;
+    }
+    
+    .company-links-section .btn {
+        margin: 3px 0;
+        width: 100%;
+    }
+}
+
+/* Experience card responsive */
+@media (max-width: 768px) {
+    .experience-card-horizontal .card-body {
+        flex-direction: column;
+    }
+    
+    .logo-section {
+        margin-bottom: 1rem;
+        align-self: center;
+    }
+    
+    .category-badge {
+        margin-top: 0.5rem;
+    }
+    
+    .experience-nav {
+        flex-direction: column;
+    }
+    
+    .experience-nav-link {
+        margin: 0.25rem 0;
+        text-align: center;
+    }
+}

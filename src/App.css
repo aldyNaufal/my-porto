@@ -1,0 +1,101 @@
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  background-color: #021526; /* Set your dark background for the body */
+}
+
+
+.main-content {
+  position: relative;
+  width: 100%;
+  z-index: 1; /* Ensure content is above the stars canvas */
+}
+
+.gradient-background {
+  background: 
+    radial-gradient(circle, #94B4C1 0%, #547792 40%, #213448 100%),
+    linear-gradient(to bottom, #ECFAE5, #DDF6D2);
+  min-height: 100vh;
+  color: #E8C999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px; /* Memberikan ruang untuk header */
+}
+
+/* Background section untuk hero content - tanpa transparansi */
+.background-start{
+  background: transparent; /* Warna latar belakang gelap tanpa transparansi */
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 150px;
+}
+
+.card1 {
+  background: transparent; 
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Background section untuk about me - dengan transparansi pada background saja */
+.card2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Overlay transparan untuk background */
+.card2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #021526;
+  opacity: 0.8; /* Mengatur opacity background */
+  z-index: 1; /* Pastikan layer ini di bawah konten */
+}
+
+/* Pastikan konten berada di atas background */
+.card2 .container {
+  position: relative;
+  z-index: 2; /* Konten harus berada di atas overlay */
+}
+
+
+/* App.css atau global stylesheet */
+.stars-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ini memastikan canvas berada di belakang konten */
+  pointer-events: none;
+}
+
+/* Animasi Fade-in untuk elemen */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}

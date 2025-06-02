@@ -1,0 +1,81 @@
+/* Base scroll reveal styles */
+.scroll-reveal {
+  opacity: 0;
+  transition: all var(--reveal-duration, 0.6s) ease-out var(--reveal-delay, 0s);
+}
+
+/* Animation dari bawah ke atas (seperti PowerPoint) */
+.scroll-reveal--up {
+  transform: translateY(var(--reveal-distance, 30px));
+}
+
+/* Animation dari atas ke bawah */
+.scroll-reveal--down {
+  transform: translateY(calc(-1 * var(--reveal-distance, 30px)));
+}
+
+/* Animation dari kiri */
+.scroll-reveal--left {
+  transform: translateX(calc(-1 * var(--reveal-distance, 30px)));
+}
+
+/* Animation dari kanan */
+.scroll-reveal--right {
+  transform: translateX(var(--reveal-distance, 30px));
+}
+
+/* Animation fade in */
+.scroll-reveal--fade {
+  transform: none;
+}
+
+/* Animation scale */
+.scroll-reveal--scale {
+  transform: scale(0.8);
+}
+
+/* Animation rotate */
+.scroll-reveal--rotate {
+  transform: rotate(10deg);
+}
+
+/* Kombinasi slide dan fade */
+.scroll-reveal--slide-fade-up {
+  transform: translateY(var(--reveal-distance, 50px));
+}
+
+.scroll-reveal--slide-fade-left {
+  transform: translateX(calc(-1 * var(--reveal-distance, 50px)));
+}
+
+.scroll-reveal--slide-fade-right {
+  transform: translateX(var(--reveal-distance, 50px));
+}
+
+/* State ketika visible */
+.scroll-reveal--visible {
+  opacity: 1;
+  transform: translate(0) scale(1) rotate(0);
+}
+
+/* Untuk animasi yang lebih smooth */
+.scroll-reveal--smooth {
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Untuk animasi yang lebih bouncy */
+.scroll-reveal--bouncy {
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Untuk container yang memiliki multiple children */
+.scroll-reveal-container .scroll-reveal {
+  transition-delay: calc(var(--reveal-delay, 0s) + var(--stagger-delay, 0s));
+}
+
+/* Stagger animation untuk multiple elements */
+.scroll-reveal--stagger-1 { --stagger-delay: 0.1s; }
+.scroll-reveal--stagger-2 { --stagger-delay: 0.2s; }
+.scroll-reveal--stagger-3 { --stagger-delay: 0.3s; }
+.scroll-reveal--stagger-4 { --stagger-delay: 0.4s; }
+.scroll-reveal--stagger-5 { --stagger-delay: 0.5s; }

@@ -1,0 +1,74 @@
+/* Navbar dasar */
+.custom-navbar {
+  background: transparent;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Brand name - Aldy Naufal */
+.navbar-brand {
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  padding-left: 1rem;
+  transition: all 0.3s ease;
+  color: #ECFAE5!important;
+  font-weight: bold;
+}
+
+/* Nav links */
+.nav-links .nav-link {
+  color: #ECFAE5!important;
+  font-weight: bold;
+  margin: 0.5rem clamp(0.5rem, 1vw, 1rem);
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.nav-links .nav-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+/* Contact button */
+.contact-button {
+  border: 2px solid #ECFAE5 !important;
+  color: #ECFAE5 !important;
+  background-color: transparent;
+  font-weight: bold;
+  padding: 6px 16px;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #ECFAE5;
+  color: black!important;
+  transform: translateY(-2px);
+}
+
+/* Media queries untuk responsive design */
+@media (max-width: 991px) {
+  .navbar-brand {
+    padding-left: 0;
+  }
+  
+  .contact-button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Menggeser nama brand lebih ke kiri */
+  .navbar-brand {
+    margin-left: 1.5rem;
+  }
+  
+  /* Menggeser tombol contact lebih ke kanan */
+  .contact-button {
+    margin-right: 1.5rem;
+  }
+}

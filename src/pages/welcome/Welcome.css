@@ -1,0 +1,150 @@
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.text-content {
+  text-align: left;
+  max-width: 1000px;
+  width: 50%;
+}
+
+/* Styling untuk text dengan warna berbeda */
+.greeting {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  margin-bottom: 0.5rem;
+  color: #FFFFFF;
+  font-weight: 300;
+}
+
+.highlight {
+  color: #FFD700; /* Gold color */
+  font-weight: 600;
+}
+
+.name {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 1rem;
+  color: #E8C999; /* Sesuai dengan warna sebelumnya */
+  font-weight: 700;
+}
+
+.profession {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  margin-bottom: 1.5rem;
+  color: #F3F3E0; /* Light blue */
+  font-weight: 400;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 40%;
+  min-width: 300px;
+}
+
+.profile-image {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #E8C999;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 25px;
+}
+
+.social-icon {
+  font-size: 36px;
+  color: #ECFAE5;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #FFD700;
+  transform: translateY(-5px);
+}
+
+.social-icon svg[data-icon="instagram"],
+.social-icon svg[data-icon="linkedin"],
+.social-icon svg[data-icon="github"] {
+  color: #E8C999;
+}
+
+.social-icon:hover svg {
+  color: #FFD700;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+.fade-in:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.fade-in:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .hero-content {
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .text-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    order: 1;
+  }
+  
+  .social-icons {
+    justify-content: center;
+    order: 2;
+  }
+  
+  .profile-container {
+    width: 100%;
+    order: 3;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .hero-content {
+    padding: 2rem 0;
+  }
+}
