@@ -2,9 +2,45 @@ version: '3.8'
 
 services:
   react-app:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
     container_name: react-frontend
     ports:
       - "3000:80"
     restart: unless-stopped
-    # Tidak ada environment variables
+    
+    # Add health check
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    # Resource limits (opsional, sesuaikan dengan VPS)
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+        reservations:
+          memory: 256M
+          cpus: '0.25'
+    
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    
+    # Labels untuk management
+    labels:
+      - "traefik.enable=true"  # Jika menggunakan Traefik
+      - "com.docker.compose.project=my-porto"
+
+# Optional: Create custom network
+networks:
+  default:
+    name: porto-network
