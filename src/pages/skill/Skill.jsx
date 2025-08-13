@@ -4,13 +4,12 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { 
   FaJs, FaHtml5, FaCss3Alt, FaReact, FaLaravel, FaPhp, 
   FaDatabase, FaJava, FaPython, FaCode, FaGitAlt,
-  FaUsers, FaComments, FaMicrophone, FaProjectDiagram, FaLightbulb, FaClipboardCheck
+  FaUsers, FaComments, FaMicrophone, FaProjectDiagram, FaLightbulb, FaClipboardCheck, FaChartBar, FaChartLine
 } from 'react-icons/fa';
 import { 
   SiTailwindcss, SiMysql, SiPostgresql, SiKotlin, 
   SiJetpackcompose, SiPytorch, SiTensorflow, SiMongodb,
-  SiScikitlearn, SiPandas, SiNumpy, SiDocker, 
-  SiMatplotlib, SiSeaborn
+  SiScikitlearn, SiPandas, SiNumpy, SiDocker,
 } from 'react-icons/si';
 
 function Skills() {
@@ -162,13 +161,13 @@ function Skills() {
                     </div>
                     <div className="skill-icon-container">
                       <div className="skill-icon">
-                        <SiMatplotlib />
+                        <FaChartBar />
                       </div>
                       <span className="skill-name">Matplotlib</span>
                     </div>
                     <div className="skill-icon-container">
                       <div className="skill-icon">
-                        <SiSeaborn />
+                        <FaChartLine />
                       </div>
                       <span className="skill-name">Seaborn</span>
                     </div>
