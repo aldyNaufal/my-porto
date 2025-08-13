@@ -97,23 +97,29 @@ function Skills() {
                 </div>
                 
                 {/* Databases */}
-                <div className="skill-category">
-                  <h3 className="category-title">Databases</h3>
-                  <div className="skill-icons">
-                    <div className="skill-icon-container">
-                      <div className="skill-icon">
-                        <SiMysql />
+                  <div className="skill-category">
+                    <h3 className="category-title">Databases</h3>
+                    <div className="skill-icons">
+                      <div className="skill-icon-container">
+                        <div className="skill-icon">
+                          <SiMysql />
+                        </div>
+                        <span className="skill-name">MySQL</span>
                       </div>
-                      <span className="skill-name">MySQL</span>
-                    </div>
-                    <div className="skill-icon-container">
-                      <div className="skill-icon">
-                        <SiPostgresql />
+                      <div className="skill-icon-container">
+                        <div className="skill-icon">
+                          <SiPostgresql />
+                        </div>
+                        <span className="skill-name">PostgreSQL</span>
                       </div>
-                      <span className="skill-name">PostgreSQL</span>
+                      <div className="skill-icon-container">
+                        <div className="skill-icon">
+                          <SiMongodb />
+                        </div>
+                        <span className="skill-name">MongoDB</span>
+                      </div>
                     </div>
                   </div>
-                </div>
               </Col>
               
               {/* Right Column */}
