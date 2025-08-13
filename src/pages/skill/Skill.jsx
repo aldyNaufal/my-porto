@@ -3,12 +3,14 @@ import './Skill.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { 
   FaJs, FaHtml5, FaCss3Alt, FaReact, FaLaravel, FaPhp, 
-  FaDatabase, FaJava, FaPython, FaCode,
+  FaDatabase, FaJava, FaPython, FaCode, FaGitAlt,
   FaUsers, FaComments, FaMicrophone, FaProjectDiagram, FaLightbulb, FaClipboardCheck
 } from 'react-icons/fa';
 import { 
   SiTailwindcss, SiMysql, SiPostgresql, SiKotlin, 
-  SiJetpackcompose, SiPytorch, SiTensorflow, SiMongodb
+  SiJetpackcompose, SiPytorch, SiTensorflow, SiMongodb,
+  SiScikitlearn, SiPandas, SiNumpy, SiDocker, 
+  SiMatplotlib, SiSeaborn
 } from 'react-icons/si';
 
 function Skills() {
@@ -97,29 +99,29 @@ function Skills() {
                 </div>
                 
                 {/* Databases */}
-                  <div className="skill-category">
-                    <h3 className="category-title">Databases</h3>
-                    <div className="skill-icons">
-                      <div className="skill-icon-container">
-                        <div className="skill-icon">
-                          <SiMysql />
-                        </div>
-                        <span className="skill-name">MySQL</span>
+                <div className="skill-category">
+                  <h3 className="category-title">Databases</h3>
+                  <div className="skill-icons">
+                    <div className="skill-icon-container">
+                      <div className="skill-icon">
+                        <SiMysql />
                       </div>
-                      <div className="skill-icon-container">
-                        <div className="skill-icon">
-                          <SiPostgresql />
-                        </div>
-                        <span className="skill-name">PostgreSQL</span>
+                      <span className="skill-name">MySQL</span>
+                    </div>
+                    <div className="skill-icon-container">
+                      <div className="skill-icon">
+                        <SiPostgresql />
                       </div>
-                      <div className="skill-icon-container">
-                        <div className="skill-icon">
-                          <SiMongodb />
-                        </div>
-                        <span className="skill-name">MongoDB</span>
+                      <span className="skill-name">PostgreSQL</span>
+                    </div>
+                    <div className="skill-icon-container">
+                      <div className="skill-icon">
+                        <SiMongodb />
                       </div>
+                      <span className="skill-name">MongoDB</span>
                     </div>
                   </div>
+                </div>
               </Col>
               
               {/* Right Column */}
@@ -140,6 +142,36 @@ function Skills() {
                       </div>
                       <span className="skill-name">TensorFlow</span>
                     </div>
+                    <div className="skill-icon-container">
+                      <div className="skill-icon">
+                        <SiScikitlearn />
+                      </div>
+                      <span className="skill-name">Scikit-learn</span>
+                    </div>
+                    <div className="skill-icon-container">
+                      <div className="skill-icon">
+                        <SiPandas />
+                      </div>
+                      <span className="skill-name">Pandas</span>
+                    </div>
+                    <div className="skill-icon-container">
+                      <div className="skill-icon">
+                        <SiNumpy />
+                      </div>
+                      <span className="skill-name">NumPy</span>
+                    </div>
+                    <div className="skill-icon-container">
+                      <div className="skill-icon">
+                        <SiMatplotlib />
+                      </div>
+                      <span className="skill-name">Matplotlib</span>
+                    </div>
+                    <div className="skill-icon-container">
+                      <div className="skill-icon">
+                        <SiSeaborn />
+                      </div>
+                      <span className="skill-name">Seaborn</span>
+                    </div>
                   </div>
                 </div>
                 
@@ -155,7 +187,25 @@ function Skills() {
                     </div>
                   </div>
                 </div>
-                
+
+                {/* DevOps / Tools */}
+                <div className="skill-category">
+                  <h3 className="category-title">DevOps / Tools</h3>
+                  <div className="skill-icons">
+                    <div className="skill-icon-container">
+                      <div className="skill-icon">
+                        <FaGitAlt />
+                      </div>
+                      <span className="skill-name">Git</span>
+                    </div>
+                    <div className="skill-icon-container">
+                      <div className="skill-icon">
+                        <SiDocker />
+                      </div>
+                      <span className="skill-name">Docker</span>
+                    </div>
+                  </div>
+                </div>
               </Col>
             </Row>
           </div>
