@@ -8,7 +8,7 @@ import {
 } from 'react-icons/fa';
 import { 
   SiTailwindcss, SiMysql, SiPostgresql, SiKotlin, 
-  SiJetpackcompose, SiPytorch, SiTensorflow
+  SiJetpackcompose, SiPytorch, SiTensorflow, SiMongodb
 } from 'react-icons/si';
 
 function Skills() {
